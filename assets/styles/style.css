@@ -27,6 +27,7 @@ nav {
 
 body {
   background-color: var(--very-lightgray);
+  color: var(--grayish-blue);
   font-size: 18px;
 }
 
@@ -38,12 +39,18 @@ h5 {
   color: var(--primary-darkblue);
 }
 
+.container {
+  padding-top: 125px;
+  padding-bottom: 125px;
+}
+
 /* NAVIGATION */
 
 .header {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  z-index: 10;
   background-color: var(--white);
 }
 
@@ -56,10 +63,19 @@ h5 {
 /* HERO*/
 
 .section-hero {
+  height: 70vh;
   display: flex;
   justify-content: space-between;
-  background-image: url(/assets/images/bg-intro-desktop.svg);
+  background-image: url("/assets/images/bg-intro-desktop.svg");
+  background-position: 1000px -275px;
   background-repeat: no-repeat;
+}
+
+.mockup-img {
+  position: relative;
+  /* bottom: 30px;
+  right: -125px; */
+  transform: translate(500px, -250px);
 }
 
 /* FEATURES */
@@ -69,6 +85,10 @@ h5 {
 }
 
 /* ARTICLES */
+.card-group {
+  gap: 20px;
+  border-radius: 15px !important;
+}
 
 /* FOOTER*/
 
