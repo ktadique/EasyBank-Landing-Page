@@ -4,6 +4,77 @@
   box-sizing: border-box;
   font-family: "Public Sans", sans-serif;
 }
+/* ## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px */
+
+:root {
+  --primary-darkblue: hsl(233, 26%, 24%);
+  --primary-limegreen: hsl(136, 65%, 51%);
+  --primary-brightcyan: hsl(192, 70%, 51%);
+  --grayish-blue: hsl(233, 8%, 62%);
+  --light-grayish-blue: hsl(220, 16%, 96%);
+  --very-lightgray: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+}
+/* 
+nav {
+  border: solid green 1px;
+} */
+
+body {
+  background-color: var(--very-lightgray);
+  font-size: 18px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--primary-darkblue);
+}
+
+/* NAVIGATION */
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--white);
+}
+
+.main-nav-list {
+  display: flex;
+  list-style: none;
+  gap: 3rem;
+}
+
+/* HERO*/
+
+.section-hero {
+  display: flex;
+  justify-content: space-between;
+  background-image: url(/assets/images/bg-intro-desktop.svg);
+  background-repeat: no-repeat;
+}
+
+/* FEATURES */
+
+.section-features {
+  background-color: var(--light-grayish-blue);
+}
+
+/* ARTICLES */
+
+/* FOOTER*/
+
+footer {
+  background-color: var(--primary-darkblue);
+}
 
 .attribution {
   font-size: 11px;
