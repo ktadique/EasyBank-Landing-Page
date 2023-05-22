@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Public Sans", sans-serif;
+  color: var(--grayish-blue);
 }
 /* ## Layout
 
@@ -27,8 +28,9 @@ nav {
 
 body {
   background-color: var(--very-lightgray);
-  color: var(--grayish-blue);
+
   font-size: 18px;
+  overflow-x: hidden;
 }
 
 h1,
@@ -42,6 +44,19 @@ h5 {
 .container {
   padding-top: 125px;
   padding-bottom: 125px;
+}
+
+.cta-btn {
+  width: 150px;
+  padding: 10px;
+  border: 0;
+  border-radius: 25px;
+  background: rgb(51, 203, 101);
+  background: linear-gradient(
+    140deg,
+    rgba(51, 203, 101, 1) 0%,
+    rgba(43, 180, 208, 1) 100%
+  );
 }
 
 /* NAVIGATION */
@@ -67,15 +82,17 @@ h5 {
   display: flex;
   justify-content: space-between;
   background-image: url("/assets/images/bg-intro-desktop.svg");
-  background-position: 1000px -275px;
+  background-position: 1000px -270px;
   background-repeat: no-repeat;
 }
 
-.mockup-img {
+.hero-heading {
+}
+
+.mockup {
   position: relative;
-  /* bottom: 30px;
-  right: -125px; */
-  transform: translate(500px, -250px);
+  left: 400px;
+  bottom: 250px;
 }
 
 /* FEATURES */
@@ -84,16 +101,77 @@ h5 {
   background-color: var(--light-grayish-blue);
 }
 
+.feature-list {
+  display: flex;
+  list-style-type: none;
+}
+
+.feature {
+  margin-right: 25px;
+}
+
 /* ARTICLES */
 .card-group {
   gap: 20px;
   border-radius: 15px !important;
 }
 
+.article-card {
+  height: 550px;
+}
+
+.article-card img {
+  height: 225px;
+}
+
+.card-body {
+  padding: 25px;
+}
+
+.author {
+  font-size: 0.9rem;
+  margin: 15px 0px;
+}
+
 /* FOOTER*/
 
-footer {
+.section-footer {
   background-color: var(--primary-darkblue);
+  letter-spacing: -1px;
+}
+
+.section-footer > .container {
+  padding: 75px 0;
+}
+
+.footer-logo {
+  fill: white;
+}
+
+.footer-nav,
+.social-nav {
+  list-style-type: none;
+  display: flex;
+}
+
+.footer-nav {
+  justify-content: flex-start;
+  margin-left: 100px;
+}
+
+.footer-nav-link {
+  color: var(--light-grayish-blue);
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.social-cont {
+  margin-top: 50px;
+}
+
+.social-nav {
+  gap: 1rem;
+  padding: 0px;
 }
 
 .attribution {
