@@ -28,9 +28,9 @@ nav {
 
 body {
   background-color: var(--very-lightgray);
-
   font-size: 18px;
   overflow-x: hidden;
+  letter-spacing: -0.1px;
 }
 
 h1,
@@ -39,6 +39,11 @@ h3,
 h4,
 h5 {
   color: var(--primary-darkblue);
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 3.5rem;
 }
 
 .container {
@@ -46,11 +51,17 @@ h5 {
   padding-bottom: 125px;
 }
 
+.heading {
+  margin-bottom: 25px;
+}
+
 .cta-btn {
-  width: 150px;
+  width: 180px;
   padding: 10px;
   border: 0;
   border-radius: 25px;
+
+  letter-spacing: 0.1px;
   background: rgb(51, 203, 101);
   background: linear-gradient(
     140deg,
@@ -75,18 +86,26 @@ h5 {
   gap: 3rem;
 }
 
+.main-nav-link:hover {
+  color: var(--primary-darkblue);
+  cursor: pointer;
+  transition: 0.15s;
+  transition-timing-function: ease-in-out;
+}
+
 /* HERO*/
 
 .section-hero {
   height: 70vh;
   display: flex;
   justify-content: space-between;
-  background-image: url("/assets/images/bg-intro-desktop.svg");
+  background-image: url("../images/bg-intro-desktop.svg");
   background-position: 1000px -270px;
   background-repeat: no-repeat;
 }
 
-.hero-heading {
+.hero-desc {
+  margin-bottom: 30px;
 }
 
 .mockup {
@@ -110,14 +129,28 @@ h5 {
   margin-right: 25px;
 }
 
+.feature-desc {
+  margin-bottom: 50px;
+}
+
+.feature-icon {
+  padding: 50px 0px;
+}
+
 /* ARTICLES */
-.card-group {
+/* .card-group {
   gap: 20px;
   border-radius: 15px !important;
+} */
+
+.articles-heading {
+  margin-bottom: 55px;
 }
 
 .article-card {
-  height: 550px;
+  height: 500px;
+  box-shadow: rgba(90, 90, 90, 0.021) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .article-card img {
@@ -126,11 +159,23 @@ h5 {
 
 .card-body {
   padding: 25px;
+  overflow: hidden;
 }
 
 .author {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   margin: 15px 0px;
+}
+
+.article-title:hover {
+  color: var(--primary-limegreen);
+  cursor: pointer;
+  transition: 0.15s;
+  transition-timing-function: ease-in-out;
+}
+
+.article-desc {
+  font-size: 1rem;
 }
 
 /* FOOTER*/
@@ -174,9 +219,21 @@ h5 {
   padding: 0px;
 }
 
+.footer-btn-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  margin-top: 25px;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
+  padding-bottom: 5px;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
