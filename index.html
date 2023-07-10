@@ -22,34 +22,47 @@
 </head>
 
 <body>
-  <header class="header navbar">
-    <a href=""><img src="./assets/images/logo.svg" alt="EasyBank" class="main-logo" /></a>
-    <nav class="main-nav">
+  <header class="header">
+    <nav class="main-navbar">
+      <a href="#"><img src="./assets/images/logo.svg" alt="EasyBank" class="main-logo" /></a>
       <ul class="main-nav-list">
-        <li class="main-nav-link">About</li>
-        <li class="main-nav-link">Contact</li>
-        <li class="main-nav-link">Blog</li>
-        <li class="main-nav-link">Careers</li>
+        <li class="main-nav-item">
+          <a href="#" class="main-nav-link">About</a>
+        </li>
+        <li class="main-nav-item">
+          <a href="#" class="main-nav-link">Contact</a>
+        </li>
+        <li class="main-nav-item">
+          <a href="#" class="main-nav-link">Blog</a>
+        </li>
+        <li class="main-nav-item">
+          <a href="#" class="main-nav-link">Careers</a>
+        </li>
       </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <button class="btn btn-primary cta-btn nav-btn">Request Invite</button>
     </nav>
-    <button class="btn btn-primary cta-btn">Request Invite</button>
   </header>
   <main>
     <section class="section-hero">
       <div class="container">
         <div class="row">
-          <div class="col-5">
+          <div class="col-md-5">
             <div class="hero">
               <h1 class="hero-heading heading">Next generation digital banking</h1>
               <div class="hero-desc">
-                Take your financial life online. Your Easybank account <br> will be a
-                one-stop-shop for spending, saving, <br> budgeting, investing, and
+                Take your financial life online. Your Easybank account will be a
+                one-stop-shop for spending, saving, budgeting, investing, and
                 much more.
               </div>
               <button class="btn btn-primary cta-btn">Request Invite</button>
             </div>
           </div>
-          <div class="col-7">
+          <div class="col-md-7">
             <div class="hero-img">
               <img src="./assets/images/image-mockups.png" alt="" class="mockup" />
             </div>
@@ -261,6 +274,26 @@
     </div>
   </footer>
 
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".main-nav-list");
+    const navLink = document.querySelectorAll(".main-nav-link");
+
+    hamburger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+
+    navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+    function closeMenu() {
+      hamburger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }
+
+  </script>
 
 </body>
 
